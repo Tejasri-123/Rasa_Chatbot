@@ -1,0 +1,347 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: Bye
+  steps:
+    - intent : goodbye
+    - action : utter_goodbye
+- story: GATE exam inquiry
+  steps:
+      - intent: what_is_gate
+      - action: utter_what_is_gate
+
+- story: Gate eligibilty
+  steps:
+  - intent: gate_eligibility
+  - action: utter_eligibility
+
+- story: GATE score eligibility inquiry
+  steps:
+      - intent: gate_score_eligibility
+      - action: utter_gate_score_eligibility
+
+
+- story: Top IITs, IISc, and NITs through GATE
+  steps:
+      - intent: top_iits_nits_iisc
+      - action: utter_top_iits_nits_iisc
+
+- story: GATE Disciplines Inquiry
+  steps:
+      - intent: gate_disciplines
+      - action: utter_gate_disciplines
+
+- story: What are PSUs?
+  steps:
+      - intent: what_are_psus
+      - action: utter_what_are_psus
+
+- story: PSUs hiring through GATE
+  steps:
+      - intent: psus_through_gate
+      - action: utter_psus_through_gate
+
+
+####################################  Basic Questions Completed ###################################
+
+
+- story: User provides subject after prompt
+  steps:
+    - intent: ask_syllabus
+    - action: utter_ask_subject
+    - intent: ask_syllabus
+    - action: action_provide_syllabus
+
+####################################  Syllabus Completed ###################################
+
+- story: User asks for important topics in a subject
+  steps:
+  - intent: ask_important_topics
+  - action: action_provide_important_topics
+
+
+- story: User asks syllabus after asking for important topics
+  steps:
+  - intent: ask_important_topics
+  - action: action_provide_important_topics
+  - intent: ask_syllabus
+  - action: action_provide_syllabus
+
+- story: User asks important topics after asking for syllabus
+  steps:
+  - intent: ask_syllabus
+  - action: action_provide_syllabus
+  - intent: ask_important_topics
+  - action: action_provide_important_topics
+
+####################################  Important topics Completed ###################################
+
+- story: User asks for GATE preparation roadmap with duration
+  steps:
+  - intent: ask_gate_roadmap
+  - action: utter_ask_duration
+  - intent: provide_duration
+  - action: action_provide_roadmap
+
+- story: User asks for GATE preparation roadmap without specifying duration
+  steps:
+  - intent: ask_gate_roadmap
+  - action: utter_ask_duration
+
+- story: User provides duration after being asked
+  steps:
+  - action: utter_ask_duration
+  - intent: provide_duration
+  - action: action_provide_roadmap
+
+- story: User asks for study tips
+  steps:
+  - intent: ask_tips
+  - action: action_provide_tips
+
+- story: User asks for both roadmap and tips
+  steps:
+  - intent: ask_gate_roadmap
+  - action: utter_ask_duration
+  - intent: provide_duration
+  - action: action_provide_roadmap
+  - intent: ask_tips
+  - action: action_provide_tips
+
+####################################  Roadmaps Completed ###################################
+
+- story: Provide resources for Aerospace Engineering
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Aerospace Engineering"
+  - action: action_provide_resources
+
+- story: Provide resources for Agricultural Engineering
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Agricultural Engineering"
+  - action: action_provide_resources
+
+- story: Provide resources for Architecture and Planning
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Architecture and Planning"
+  - action: action_provide_resources
+
+- story: Provide resources for Biomedical Engineering
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Biomedical Engineering"
+  - action: action_provide_resources
+
+- story: Provide resources for Biotechnology
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Biotechnology"
+  - action: action_provide_resources
+
+- story: Provide resources for Civil Engineering
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Civil Engineering"
+  - action: action_provide_resources
+
+- story: Provide resources for Chemical Engineering
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Chemical Engineering"
+  - action: action_provide_resources
+
+- story: Provide resources for Computer Science and Information Technology
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Computer Science and Information Technology"
+  - action: action_provide_resources
+
+- story: Provide resources for Chemistry
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Chemistry"
+  - action: action_provide_resources
+
+- story: Provide resources for Electronics and Communication Engineering
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Electronics and Communication Engineering"
+  - action: action_provide_resources
+
+- story: Provide resources for Electrical Engineering
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Electrical Engineering"
+  - action: action_provide_resources
+
+- story: Provide resources for Environmental Science and Engineering
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Environmental Science and Engineering"
+  - action: action_provide_resources
+
+- story: Provide resources for Ecology and Evolution
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Ecology and Evolution"
+  - action: action_provide_resources
+
+- story: Provide resources for Geomatics Engineering
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Geomatics Engineering"
+  - action: action_provide_resources
+
+- story: Provide resources for Geology and Geophysics
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Geology and Geophysics"
+  - action: action_provide_resources
+
+- story: Provide resources for Instrumentation Engineering
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Instrumentation Engineering"
+  - action: action_provide_resources
+
+- story: Provide resources for Mathematics
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Mathematics"
+  - action: action_provide_resources
+
+- story: Provide resources for Mechanical Engineering
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Mechanical Engineering"
+  - action: action_provide_resources
+
+- story: Provide resources for Mining Engineering
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Mining Engineering"
+  - action: action_provide_resources
+
+- story: Provide resources for Metallurgical Engineering
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Metallurgical Engineering"
+  - action: action_provide_resources
+
+- story: Provide resources for Naval Architecture and Marine Engineering
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Naval Architecture and Marine Engineering"
+  - action: action_provide_resources
+
+- story: Provide resources for Petroleum Engineering
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Petroleum Engineering"
+  - action: action_provide_resources
+
+- story: Provide resources for Physics
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Physics"
+  - action: action_provide_resources
+
+- story: Provide resources for Production and Industrial Engineering
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Production and Industrial Engineering"
+  - action: action_provide_resources
+
+- story: Provide resources for Statistics
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Statistics"
+  - action: action_provide_resources
+
+- story: Provide resources for Textile Engineering and Fibre Science
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Textile Engineering and Fibre Science"
+  - action: action_provide_resources
+
+- story: Provide resources for Engineering Sciences
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Engineering Sciences"
+  - action: action_provide_resources
+
+- story: Provide resources for Humanities and Social Sciences
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Humanities and Social Sciences"
+  - action: action_provide_resources
+
+- story: Provide resources for Life Sciences
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Life Sciences"
+  - action: action_provide_resources
+
+- story: Provide resources for Data Science and Artificial Intelligence
+  steps:
+  - intent: ask_resources
+    entities:
+      - subject: "Data Science and Artificial Intelligence"
+  - action: action_provide_resources
+
+
+- story: bot_challenge
+  steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+
+
+
+
+
+
+
+
+
+
+
+
+

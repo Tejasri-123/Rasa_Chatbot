@@ -1,0 +1,267 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: what_is_gate
+  examples: |
+      - What is GATE?
+      - Can you explain GATE?
+      - What does the GATE exam mean?
+      - Tell me about the GATE exam.
+      - What is the purpose of the GATE exam?
+      - Why should I take the GATE exam?
+      - Give me details about GATE.
+      - What is the full form of GATE?
+      - Is GATE only for engineering students?
+      - Who conducts the GATE exam?
+
+- intent: gate_eligibility
+  examples: |
+    - Who is eligible for the GATE exam?
+    - What is the eligibility criteria for GATE?
+    - Can final-year students apply for GATE?
+    - Are diploma holders eligible for GATE?
+    - What qualifications are required for the GATE exam?
+    - Is there an age limit for GATE?
+    - Can MSc students appear for GATE?
+    - Are B.Sc. graduates eligible for GATE?
+    - Do I need work experience to write GATE?
+    - Can non-engineering students apply for GATE?
+
+
+- intent: top_iits_nits_iisc
+  examples: |
+      - What are the top 10 IITs through GATE?
+      - Which are the best IITs for M.Tech?
+      - List the top IITs accepting GATE scores.
+      - What are the best NITs for M.Tech admission?
+      - Give me the top NITs that accept GATE.
+      - Which IITs and IISc are best for M.Tech?
+      - What are the top 10 NITs for GATE?
+      - Which IITs have the highest ranking for GATE admissions?
+      - Name the best institutes for M.Tech through GATE.
+      - What is the ranking of top IITs, IISc, and NITs based on GATE?
+
+- intent: gate_score_eligibility
+  examples: |
+    - What is the validity of the GATE score?
+    - How long is the GATE score valid?
+    - What is the minimum score required to qualify for GATE?
+    - Is there a passing score for GATE?
+    - How is the GATE score calculated?
+    - What is a good score in GATE?
+    - Can I get admission with a low GATE score?
+    - Is the GATE score required for PSU jobs?
+    - Do IITs and NITs have different GATE score requirements?
+
+- intent: gate_disciplines
+  examples: |
+      - What are the disciplines in GATE?
+      - How many subjects are there in GATE?
+      - Can you list the branches available in GATE?
+      - What are the different fields in GATE?
+      - Which disciplines can appear for the GATE exam?
+      - How many GATE papers are available?
+      - List the subject codes for GATE.
+      - What subjects are covered in the GATE exam?
+      - How many engineering branches are eligible for GATE?
+      - What are the specialization areas in GATE?
+
+- intent: what_are_psus
+  examples: |
+      - What are PSUs?
+      - Can you explain PSUs?
+      - What does PSU stand for?
+      - What is a Public Sector Undertaking?
+      - Tell me about PSUs in India.
+      - What are government-owned companies in India?
+      - Are PSUs different from private companies?
+      - Who controls PSUs?
+      - What are the benefits of working in PSUs?
+      - How do PSUs recruit employees?
+
+- intent: psus_through_gate
+  examples: |
+      - Which PSUs recruit through GATE?
+      - List the PSUs that accept GATE scores.
+      - What are the top PSUs hiring through GATE?
+      - Can I get a job in PSU with my GATE score?
+      - Which government companies hire through GATE?
+      - Give me a list of PSUs that use GATE scores.
+      - How many PSUs participate in GATE recruitment?
+      - Is GATE mandatory for PSU jobs?
+      - Do all PSUs require a GATE score?
+      - What is the cutoff for PSUs through GATE?
+
+####################################  Basic Questions Completed ###################################
+
+
+- intent: ask_syllabus
+  examples: |
+    - Can I get the syllabus for [Aerospace Engineering](subject)?
+    - Provide the syllabus for [Agricultural Engineering](subject).
+    - What is the syllabus of [Architecture and Planning](subject)?
+    - I need the syllabus for [Biomedical Engineering](subject).
+    - Give me the syllabus for [Biotechnology](subject).
+    - Please provide GATE syllabus for [Civil Engineering](subject).
+    - Can you share the syllabus for [Chemical Engineering](subject)?
+    - What's the syllabus of [Computer Science and Information Technology](subject)?
+    - I want the syllabus for [Chemistry](subject).
+    - Tell me the syllabus of [Electronics and Communication Engineering](subject).
+    - Provide syllabus details for [Electrical Engineering](subject).
+    - Show me the syllabus for [Environmental Science and Engineering](subject).
+    - What's in the syllabus of [Ecology and Evolution](subject)?
+    - I need the GATE syllabus for [Geomatics Engineering](subject).
+    - Could you provide the syllabus for [Geology and Geophysics](subject)?
+    - Share the syllabus for [Instrumentation Engineering](subject).
+    - Can you give the syllabus for [Mathematics](subject)?
+    - I would like the syllabus of [Mechanical Engineering](subject).
+    - Provide the syllabus for [Mining Engineering](subject).
+    - Get me the syllabus of [Metallurgical Engineering](subject).
+    - What's the syllabus for [Naval Architecture and Marine Engineering](subject)?
+    - Provide GATE syllabus for [Petroleum Engineering](subject).
+    - Can I see the syllabus of [Physics](subject)?
+    - What is the syllabus of [Production and Industrial Engineering](subject)?
+    - I want the syllabus for [Statistics](subject).
+    - Please provide the syllabus of [Textile Engineering and Fibre Science](subject).
+    - What’s in the syllabus of [Engineering Sciences](subject)?
+    - Show me the syllabus of [Humanities and Social Sciences](subject).
+    - Provide the syllabus for [Life Sciences](subject).
+    - Can I get the syllabus of [Data Science and Artificial Intelligence](subject)?
+
+####################################  Syllabus Completed ###################################
+
+
+- intent: ask_important_topics
+  examples: |
+      - What are the important topics in [Aerospace Engineering](subject)?
+      - Can you tell me the major topics for [Agricultural Engineering](subject)?
+      - Provide important topics for [Architecture and Planning](subject).
+      - List the key topics in [Biomedical Engineering](subject).
+      - Give me the important topics for [Biotechnology](subject).
+      - Please provide the major subjects for [Civil Engineering](subject).
+      - What are the key areas in [Chemical Engineering](subject)?
+      - Tell me the important topics in [Computer Science and Information Technology](subject).
+      - What are the major concepts of [Chemistry](subject)?
+      - Provide the essential topics for [Electronics and Communication Engineering](subject).
+      - Can you share the key topics in [Electrical Engineering](subject)?
+      - What are the important topics of [Environmental Science and Engineering](subject)?
+      - List the crucial subjects in [Ecology and Evolution](subject).
+      - What are the major topics in [Geomatics Engineering](subject)?
+      - Provide key concepts for [Geology and Geophysics](subject).
+      - Can I know the important areas of [Instrumentation Engineering](subject)?
+      - Please share the major topics for [Mathematics](subject).
+      - What topics are significant in [Mechanical Engineering](subject)?
+      - List the key concepts of [Mining Engineering](subject).
+      - Tell me the important subjects for [Metallurgical Engineering](subject).
+      - Provide essential topics for [Naval Architecture and Marine Engineering](subject).
+      - What are the core areas in [Petroleum Engineering](subject)?
+      - List the major topics in [Physics](subject).
+      - Give me the important topics for [Production and Industrial Engineering](subject).
+      - Provide the key areas in [Statistics](subject).
+      - Can you list the major topics for [Textile Engineering and Fibre Science](subject)?
+      - What topics should I focus on in [Engineering Sciences](subject)?
+      - Tell me the essential topics of [Humanities and Social Sciences](subject).
+      - What are the important topics in [Life Sciences](subject)?
+      - Provide the important topics in [Data Science and Artificial Intelligence](subject).
+
+####################################  Important topics Completed ###################################
+
+- intent: ask_gate_roadmap
+  examples: |
+    - Can you give me a GATE preparation roadmap?
+    - What is the GATE study plan for 1 year?
+    - I need a 6-month GATE preparation strategy.
+    - How can I prepare for GATE in 3 months?
+    - Give me a detailed plan for GATE preparation.
+    - Suggest a study plan for GATE.
+
+
+- intent: provide_duration
+  examples: |
+    - I want a [1 year](duration) study plan
+    - Give me a roadmap for [6 months](duration)
+    - Can you suggest a plan for [3 months](duration)?
+    - What is the GATE study plan for [1 year](duration)?
+    - Provide me a preparation schedule for [6 months](duration)
+    - Tell me about the [3 months](duration) GATE preparation plan
+
+
+- intent: ask_tips
+  examples: |
+    - Give me some tips for GATE preparation.
+    - How can I stay consistent in my study?
+    - Tips for cracking GATE?
+    - Best way to manage time for GATE preparation?
+    - Any suggestions for revision
+####################################  Roadmaps Completed ###################################
+
+- intent: ask_resources
+  examples: |
+    - Can you recommend resources for [Aerospace Engineering](subject)?
+    - Provide me study materials for [Agricultural Engineering](subject).
+    - I need resources for [Architecture and Planning](subject).
+    - Where can I find materials for [Biomedical Engineering](subject)?
+    - Suggest some good resources for [Biotechnology](subject).
+    - What are the best resources for [Civil Engineering](subject)?
+    - Give me books and online courses for [Chemical Engineering](subject).
+    - Share resources for [Computer Science and Information Technology](subject).
+    - How can I prepare for [Chemistry](subject)?
+    - Recommend some sites for [Electronics and Communication Engineering](subject).
+    - Help me with resources for [Electrical Engineering](subject).
+    - Which books are good for [Environmental Science and Engineering](subject)?
+    - Provide learning materials for [Ecology and Evolution](subject).
+    - I am looking for study guides on [Geomatics Engineering](subject).
+    - Suggest best resources for [Geology and Geophysics](subject).
+    - Recommend sources for [Instrumentation Engineering](subject).
+    - Can you help with resources for [Mathematics](subject)?
+    - Provide some study tips and materials for [Mechanical Engineering](subject).
+    - Where can I study about [Mining Engineering](subject)?
+    - Best materials for [Metallurgical Engineering](subject)?
+    - Help me find books and courses on [Naval Architecture and Marine Engineering](subject).
+    - Recommend good resources for [Petroleum Engineering](subject).
+    - I want to study [Physics](subject), can you help?
+    - What are the best online platforms for [Production and Industrial Engineering](subject)?
+    - Guide me with resources for [Statistics](subject).
+    - Provide resources for [Textile Engineering and Fibre Science](subject).
+    - I need materials for [Engineering Sciences](subject).
+    - Best websites and books for [Humanities and Social Sciences](subject).
+    - How can I get study resources for [Life Sciences](subject)?
+    - Share learning materials for [Data Science and Artificial Intelligence](subject).
+
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?

@@ -1,0 +1,61 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Provide syllabus for subject
+  condition:
+    - slot_was_set:
+        - subject: true
+  steps:
+    - intent: ask_syllabus
+    - action: action_provide_syllabus
+
+- rule: Provide important topics when user asks
+  steps:
+  - intent: ask_important_topics
+  - action: action_provide_important_topics
+
+
+
+- rule: Greet the user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye to the user
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Provide GATE roadmap based on duration
+  condition:
+  - slot_was_set:
+      - duration
+  steps:
+  - intent: provide_duration
+  - action: action_provide_roadmap
+
+- rule: Ask for duration if not provided
+  steps:
+  - intent: ask_gate_roadmap
+  - action: utter_ask_duration
+
+- rule: Provide study tips
+  steps:
+  - intent: ask_tips
+  - action: action_provide_tips
+
+- rule: Provide resources based on the subject
+  steps:
+    - intent: ask_resources
+    - action: action_provide_resources

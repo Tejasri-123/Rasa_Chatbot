@@ -1,0 +1,271 @@
+version: "3.1"
+
+
+entities:
+  - subject
+  - duration
+
+slots:
+  subject:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: subject
+  
+  duration:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: duration
+        
+
+
+intents:
+  - greet
+  - goodbye
+  - what_is_gate
+  - gate_eligibility
+  - gate_score_eligibility
+  - top_iits_nits_iisc
+  - gate_disciplines
+  - what_are_psus
+  - psus_through_gate
+  - bot_challenge
+  - ask_syllabus
+  - ask_important_topics
+  - ask_gate_roadmap
+  - provide_duration
+  - ask_tips
+  - ask_resources
+  
+  
+
+    
+responses:
+
+  utter_greet: 
+  - text: "🤖 Hey! How are you? Here I want to assist you for your GATE Exam."
+
+  utter_iamabot:
+  - text: "I am a bot. I don't know what you are asking"
+
+  
+  utter_goodbye: 
+  - text: "Bye"
+
+  
+
+  utter_what_is_gate:
+    - text: |
+        <strong>GATE (Graduate Aptitude Test in Engineering)</strong> is a national-level entrance exam conducted jointly by <strong>IITs and IISc</strong>.  
+        It tests candidates' understanding of undergraduate-level subjects in <strong>Engineering, Technology, Science, Commerce, and Arts</strong>.  
+        
+        <h3>🔎 Key Points:</h3>
+        <ul>
+          <li><b>📌 Purpose:</b> Used for M.Tech admissions, PSU recruitments, and higher studies.</li>
+          <li><b>📌 Eligibility:</b> Open to final/pre-final year students and graduates in relevant fields.</li>
+          <li><b>📌 Conducting Body:</b> Rotated annually among <b>IITs and IISc</b>.</li>
+          <li><b>📌 Score Validity:</b> GATE scores are valid for <b>three years</b> from the result date.</li>
+          <li><b>📌 Subjects Covered:</b> Various engineering and science disciplines.</li>
+          <li><b>📅 Held On:</b> Usually conducted in <b>February</b>.</li>
+          <li><b>📝 Application:</b> Application forms are released in <b>July-August</b>.</li>
+        </ul>
+
+
+  utter_eligibility:
+    - text: |
+        <h3>📚 GATE Exam Eligibility Criteria</h3>
+        <ul>
+          <li><b>✅ No Attempt Limit:</b> Candidates can attempt GATE any number of times.</li>
+          <li><b>✅ No Age Restriction:</b> There is no upper age limit to appear for GATE.</li>
+          <li><b>🎓 Educational Qualification:</b> Candidates must be in the <b>final or pre-final year</b> or have completed their Bachelor's degree in Engineering, Technology, Architecture, Science, Commerce, or Arts.</li>
+          <li><b>🌏 Nationality:</b> Candidates of <b>Indian nationality</b> are eligible. Additionally, <b>foreign nationals</b> from certain countries can also apply.</li>
+          <li><b>🏢 Valid for PSUs & Higher Studies:</b> A good GATE score is required for admissions in <b>M.Tech, Ph.D., and PSU recruitments</b>.</li>
+        </ul>
+
+  utter_top_iits_nits_iisc:
+    - text: |
+        <h3>🎓 Top IITs, IISc, and NITs for M.Tech through GATE</h3>
+
+        <h4>🏆 Top 10 IITs for GATE Admissions:</h4>
+        <ol>
+          <li>IIT Madras</li>
+          <li>IIT Bombay</li>
+          <li>IIT Delhi</li>
+          <li>IIT Kanpur</li>
+          <li>IIT Kharagpur</li>
+          <li>IIT Roorkee</li>
+          <li>IIT Guwahati</li>
+          <li>IIT Hyderabad</li>
+          <li>IIT BHU (Varanasi)</li>
+          <li>IIT Indore</li>
+        </ol>
+
+        <h4>🏅 Indian Institute of Science (IISc):</h4>
+        <p>IISc Bangalore is one of the most prestigious institutes for <b>M.Tech and research programs</b> through GATE.</p>
+
+        <h4>🎓 Top 10 NITs for GATE Admissions:</h4>
+        <ol>
+          <li>NIT Trichy (NITT)</li>
+          <li>NIT Warangal (NITW)</li>
+          <li>NIT Surathkal (NITK)</li>
+          <li>NIT Calicut (NITC)</li>
+          <li>NIT Rourkela</li>
+          <li>NIT Allahabad (MNNIT)</li>
+          <li>NIT Jaipur (MNIT)</li>
+          <li>NIT Nagpur (VNIT)</li>
+          <li>NIT Kurukshetra</li>
+          <li>NIT Durgapur</li>
+        </ol>
+
+        <p>These institutes offer excellent faculty, infrastructure, and placement opportunities.</p>
+
+
+  utter_gate_disciplines:
+    - text: |
+        <h3>📚 GATE (Graduate Aptitude Test in Engineering) Disciplines</h3>
+        <p>The GATE exam offers <b>30 disciplines (papers)</b>. Candidates can choose <b>one or two papers</b> based on their eligibility and interest.</p>
+        
+        <h4>List of GATE Disciplines:</h4>
+        <ol>
+          <li>Aerospace Engineering [AE]</li>
+          <li>Agricultural Engineering [AG]</li>
+          <li>Architecture and Planning [AR]</li>
+          <li>Biomedical Engineering [BM]</li>
+          <li>Biotechnology [BT]</li>
+          <li>Chemical Engineering [CH]</li>
+          <li>Civil Engineering [CE]</li>
+          <li>Computer Science and Information Technology [CS]</li>
+          <li>Chemistry [CY]</li>
+          <li>Electronics and Communication Engineering [EC]</li>
+          <li>Electrical Engineering [EE]</li>
+          <li>Environmental Science and Engineering [ES]</li>
+          <li>Ecology and Evolution [EY]</li>
+          <li>Geology and Geophysics [GG]</li>
+          <li>Instrumentation Engineering [IN]</li>
+          <li>Mathematics [MA]</li>
+          <li>Mechanical Engineering [ME]</li>
+          <li>Mining Engineering [MN]</li>
+          <li>Metallurgical Engineering [MT]</li>
+          <li>Naval Architecture and Marine Engineering (NEW) [NM]</li>
+          <li>Petroleum Engineering [PE]</li>
+          <li>Physics [PH]</li>
+          <li>Production and Industrial Engineering [PI]</li>
+          <li>Statistics [ST]</li>
+          <li>Textile Engineering and Fibre Science [TF]</li>
+          <li>Engineering Sciences [XE]</li>
+          <li>Life Sciences [XL]</li>
+          <li>Humanities and Social Sciences [XH]</li>
+          <li>Geomatics Engineering [GE]</li>
+          <li>Data Science and Artificial Intelligence (NEW) [DA]</li>
+        </ol>
+        
+        <h4>📝 Important Notes:</h4>
+        <ul>
+          <li>Candidates can opt for <b>two papers</b> in certain allowed combinations.</li>
+          <li>GATE is open to <b>engineering, science, humanities, and social science students</b>.</li>
+          <li>Some disciplines include multiple sections for specialization.</li>
+        </ul>
+
+  utter_gate_score_eligibility:
+    - text: |
+        <h3>📊 GATE Score Eligibility Details</h3>
+        <ul>
+          <li><b>Score Validity:</b> GATE scores are valid for <b>three years</b> from the result date.</li>
+          <li><b>Minimum Qualifying Score:</b> The qualifying marks vary each year depending on the exam difficulty and number of candidates.</li>
+          <li><b>Admission & Jobs:</b> A good GATE score is essential for <b>M.Tech, Ph.D. admissions, and PSU recruitments</b>.</li>
+          <li><b>Cutoff Marks:</b> Each institute and PSU has its own GATE cutoff. Higher-ranked institutes and PSUs generally require higher scores.</li>
+          <li><b>Score Calculation:</b> The GATE score is calculated using the candidate’s raw marks, normalized for multi-session papers, and converted to a score out of <b>1000</b>.</li>
+        </ul>
+  utter_what_are_psus:
+    - text: |
+        <h3>🏢 About PSUs (Public Sector Undertakings)</h3>
+        <p>PSUs are <b>government-owned corporations</b> in India, either fully or partially owned by the Government of India or a state government.</p>
+
+        <h4>🔎 Key Points about PSUs:</h4>
+        <ul>
+          <li><b>Types of PSUs:</b>
+            <ul>
+              <li><b>Maharatna PSUs:</b> Largest & financially strongest</li>
+              <li><b>Navratna PSUs:</b> Financially strong with more autonomy</li>
+              <li><b>Miniratna PSUs:</b> Smaller but significant government enterprises</li>
+            </ul>
+          </li>
+          <li><b>Ownership:</b> At least <b>51% government shareholding</b>.</li>
+          <li><b>Sectors:</b> Energy, Telecommunications, Infrastructure, Manufacturing, and more.</li>
+          <li><b>Recruitment:</b> Many PSUs <b>recruit engineers & graduates through GATE</b> scores.</li>
+        </ul>
+
+        <h4>🌟 Examples of Major PSUs:</h4>
+        <p>ONGC, NTPC, BHEL, GAIL, IOCL, SAIL, HPCL, BPCL, and many others.</p>
+        
+        <p>Let me know if you need more details!</p>
+
+  utter_psus_through_gate:
+    - text: |
+        <h3>🏢 PSUs Recruiting Through GATE</h3>
+        <p>Many <b>top PSUs</b> recruit candidates through GATE scores for engineering and management positions.</p>
+
+        <h4>🛠️ <b>Top PSUs Hiring Through GATE:</b></h4>
+        <h5>🔹 Maharatna PSUs:</h5>
+        <ul>
+          <li>ONGC (Oil and Natural Gas Corporation)</li>
+          <li>NTPC (National Thermal Power Corporation)</li>
+          <li>IOCL (Indian Oil Corporation Limited)</li>
+          <li>BPCL (Bharat Petroleum Corporation Limited)</li>
+          <li>HPCL (Hindustan Petroleum Corporation Limited)</li>
+          <li>GAIL (Gas Authority of India Limited)</li>
+          <li>SAIL (Steel Authority of India Limited)</li>
+        </ul>
+
+        <h5>🔹 Navratna PSUs:</h5>
+        <ul>
+          <li>BHEL (Bharat Heavy Electricals Limited)</li>
+          <li>Power Grid Corporation of India</li>
+          <li>BEL (Bharat Electronics Limited)</li>
+          <li>NALCO (National Aluminium Company Limited)</li>
+        </ul>
+
+        <h4>⚡ <b>Important Notes:</b></h4>
+        <ul>
+          <li>PSUs set their own <b>GATE cutoffs</b> based on vacancies.</li>
+          <li>Some PSUs conduct <b>additional tests/interviews</b> along with GATE scores.</li>
+          <li>GATE is <b>not mandatory for all PSUs</b>, but it provides an advantage for direct recruitment.</li>
+        </ul>
+
+####################################  Basic Questions Completed ###################################
+
+
+
+  utter_ask_subject:
+    - text: <p>Please specify the subject for which you need the GATE syllabus.</p>
+
+####################################  Syllabus Completed ###################################
+
+  utter_ask_duration:
+    - text : <p>Would you like a roadmap for 1 year, 6 months or 3 months?</p>
+
+####################################  Roadmaps Completed #######################################################################  Roadmaps Completed ###################################
+
+  utter_provide_resources:
+    - text: <p>Here are some recommended resources for {subject}.</p>
+
+
+actions:
+  - action_provide_syllabus
+  - action_provide_important_topics
+  - action_provide_roadmap
+  - action_provide_tips
+  - action_provide_resources
+
+
+
+
+
+    
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
